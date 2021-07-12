@@ -4,11 +4,18 @@
 package sequality;
 
 public class App {
-    public String getGreeting() {
-        return "Hello World!";
-    }
+  public String getGreeting() {
+    return "Hello World!";
+  }
 
-    public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
-    }
+  public static void main(String[] args) {
+    Calculate calculate = new Calculate();
+    System.out.println(new App().getGreeting());
+    System.out.printf("Sum of %d and %d is %d. Average is %.1f.\n", 2, 3, calculate.sum(2, 3),
+        calculate.twice_ave(2, 3));
+    System.out.printf("Sum of %d to %d is %d. Average is %.1f.\n", 1, 10, calculate.csum(1, 10),
+        calculate.c_ave(1, 10));
+    System.out.printf("Sum of odd of %d to %d is %d. Sum of even is %d.\n", 1, 10, calculate.odd(1, 10),
+        calculate.even(1, 10));
+  }
 }
