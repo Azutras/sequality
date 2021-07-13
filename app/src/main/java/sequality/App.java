@@ -15,7 +15,7 @@ public class App {
         calculate.twice_ave(2, 3));
     System.out.printf("Sum of %d to %d is %d. Average is %.1f.\n", 1, 10, calculate.csum(1, 10),
         calculate.c_ave(1, 10));
-    System.out.printf("Sum of odd of %d to %d is %d. Sum of even is %d.\n", 1, 10, calculate.odd(1, 10),
-        calculate.even(1, 10));
+    System.out.printf("Sum of odd of %d to %d is %d. Sum of even is %d.\n", 1, 10, calculate.e_sum(1, 10, 1),
+        calculate.e_sum(1, 10, 0));
   }
 }

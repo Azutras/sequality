@@ -23,10 +23,12 @@ public class Calculate {
     return (double) sum / count;
   }
 
-  public int odd(int x, int y) {
+  public int e_sum(int x, int y, int flag) {
     int sum = 0;
-    if (x % 2 == 0)
+
+    if ((flag % 2 == 0 && x % 2 != 0) || flag % 2 != 0 && x % 2 == 0)
       x++;
+
     if (y < x) {
       int tmp = x;
       x = y;
@@ -38,18 +40,4 @@ public class Calculate {
     return sum;
   }
 
-  public int even(int x, int y) {
-    int sum = 0;
-    if (x % 2 != 0)
-      x++;
-    if (y < x) {
-      int tmp = x;
-      x = y;
-      y = tmp;
-    }
-    for (int i = x; i <= y; i += 2) {
-      sum = this.sum(sum, i);
-    }
-    return sum;
-  }
 }
